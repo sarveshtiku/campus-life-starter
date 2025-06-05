@@ -1,10 +1,11 @@
-/* Reset some default browser styles */
+/* Reset and base styles */
 body {
   font-family: Arial, sans-serif;
   background: #f4f4f4;
   margin: 0;
   padding: 0;
   color: #333;
+  line-height: 1.6;
 }
 
 /* Header Banner */
@@ -13,42 +14,48 @@ body {
   color: white;
   text-align: center;
   padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 #banner h1 {
   font-size: 48px;
-  margin-bottom: 10px;
+  margin: 0 0 10px;
   color: #333;
 }
 
 #banner p {
   font-size: 20px;
+  margin: 0;
   color: #333;
 }
 
-/* Navigation */
+/* Navigation Bar */
 #navigation {
   background-color: #003366;
-  padding: 10px 0;
+  padding: 12px 0;
 }
 
 #navigation ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 #navigation li {
-  display: inline;
-  margin: 0 15px;
+  margin: 0 20px;
 }
 
 #navigation a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
 #navigation a:hover {
@@ -57,26 +64,40 @@ body {
 
 /* Section Layout */
 section {
-  padding: 40px 20px;
+  padding: 40px 24px;
   background: white;
-  margin: 20px;
+  margin: 30px auto;
   border-radius: 10px;
+  max-width: 1000px;
 }
 
-/* Headings */
+/* Section Headings */
 h2 {
   color: #003366;
   border-bottom: 2px solid #ccc;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
+  margin-bottom: 24px;
 }
 
 /* Articles */
 article {
-  margin-bottom: 30px;
-  padding: 15px;
+  margin-bottom: 32px;
+  padding: 20px;
   background-color: #f9f9f9;
   border-left: 4px solid #003366;
   border-radius: 8px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+article h3, article h4 {
+  margin: 8px 0;
+}
+
+article p {
+  margin: 6px 0;
 }
 
 /* Student Org Highlight */
@@ -86,19 +107,52 @@ article {
 
 /* Images */
 img {
-  max-width: 100%;
+  max-width: 200px;
   height: auto;
-  border-radius: 4px;
+  border-radius: 6px;
+  flex-shrink: 0;
 }
 
 /* Links */
 a {
   color: #003366;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 a:hover {
   color: #005599;
   text-decoration: underline;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  #banner {
+    flex-direction: column;
+    padding: 40px 15px;
+  }
+
+  #navigation ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #navigation li {
+    margin: 10px 0;
+  }
+
+  article {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  img {
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+
+  section {
+    margin: 20px;
+    padding: 30px 16px;
+  }
 }
