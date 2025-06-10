@@ -1,4 +1,4 @@
-# Campus Life Starter <3
+# Campus Life Starter 
 
 This is my completed version of the **Campus Life** website project for the CodePath SITE Program (Summer 2025). The goal of this lab was to build a fully responsive and accessible single-page site that showcases student organizations, events, and campus news using semantic HTML and modern CSS techniques.
 
